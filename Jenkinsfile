@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('My First Stage') {
+        stage('Build API container') {
             steps {
-                sh 'echo "Wooh, pipeline green?"'
+                sh 'docker build . -t heiti/movie-api'
             }
         }
     }
